@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "page": "^1.7.1",
     "ractive": "^0.7.3",
     "raw-loader": "^0.5.1"
   }
