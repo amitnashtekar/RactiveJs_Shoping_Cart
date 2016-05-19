@@ -6,6 +6,7 @@ import template from './views/app.html';
 import SearchUserComponent from './components/layout/search-user';
 import HomePageComponent from './components/home-page';
 import UserPageComponent from './components/user-page'
+import RouterComponent from './components/layout/router'
 
 let App=new Ractive({
     el:'#app',
@@ -13,10 +14,13 @@ let App=new Ractive({
     components: {
         SearchUser: SearchUserComponent,
         HomePage: HomePageComponent,
-        UserPage: UserPageComponent
+        UserPage: UserPageComponent,
+        Router:RouterComponent
     },
     data:{
-        name:'Amit'
+        name:'Amit',
+        componentName: 'HomePage'
+
     }
 
 });
