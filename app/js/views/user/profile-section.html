@@ -1,0 +1,15 @@
+<div>
+    <h3> User Profile </h3>
+    <ul class="list-group">
+        {{#profile.avatar_url}}<li class="list-group-item"> <img src={{profile.avatar_url}} class="img-rounded img-responsive" style="min-height: 261px;"/></li>{{/profile.avatar_url}}
+        {{#profile.name}}<li class="list-group-item">Name: {{profile.name}}</li>{{/profile.name}}
+        {{#profile.login}}<li class="list-group-item">Username: {{profile.login}}</li>{{/profile.login}}
+        {{#profile.email}}<li class="list-group-item">Email: {{profile.email}}</li>{{/profile.email}}
+        {{#profile.location}}<li class="list-group-item">Location: {{profile.location}}</li>{{/profile.location}}
+        {{#profile.company}}<li class="list-group-item">Company: {{profile.company}}</li>{{/profile.company}}
+        {{#profile.followers}}<li class="list-group-item">Followers: {{profile.followers}}</li>{{/profile.followers}}
+        {{#profile.following}}<li class="list-group-item">Following: {{profile.following}}</li>{{/profile.following}}
+        {{#profile.public_repos}}<li class="list-group-item">Public Repos: {{profile.public_repos}}</li>{{/profile.public_repos}}
+        {{#profile.blog}}<li class="list-group-item">Blog: <a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li>{{/profile.blog}}
+    </ul>
+</div> 
