@@ -10,11 +10,11 @@ import UserPage from '../components/user-page';
 var routes = new Map();
 
 routes.set('/', (context, next) => {
-    next(null, HomePage);
+    next(null, 'HomePage');
 });
 
 routes.set('/user/:username', (context, next) => {
-    next(null, UserPage);
+    next(null, 'UserPage');
 });
 
 export default routes;

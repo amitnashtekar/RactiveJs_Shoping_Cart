@@ -6,9 +6,9 @@ import page from 'page';
 import Ractive from 'ractive';
 
 function navigationHandler(routeHandler, onNavigation) {
-    return function(context/*, next*/) {
-        routeHandler(context, (error, PageComponent = {}, data = {}) => {
-            context.pageName = PageComponent._name;
+    return function(context) {
+        routeHandler(context, (error, PageComponent , data ) => {
+            context.pageName = PageComponent;
         context.state = data;
         onNavigation(error, context);
     })
