@@ -6,6 +6,7 @@
 import router from '../plugins/router';
 import HomePage from '../components/home-page';
 import UserPage from '../components/user-page';
+import UserModel from '../models/user';
 
 var routes = new Map();
 
@@ -14,7 +15,16 @@ routes.set('/', (context, next) => {
 });
 
 routes.set('/user/:username', (context, next) => {
-    next(null, 'UserPage');
+    UserModel.findByName(context.params.username)
+    .then((user) => {
+    next(null, 'UserPage', {
+        user: user
+    });
+})
+.catch((err) => {
+    next(err);
+});
+
 });
 
 export default routes;

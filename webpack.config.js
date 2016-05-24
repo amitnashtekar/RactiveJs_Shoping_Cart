@@ -1,6 +1,8 @@
 /**
  * Created by amita on 5/18/2016.
  */
+var webpack = require('webpack');
+
 module.exports = {
     entry: './app/js/app.js',
     output: {
@@ -23,5 +25,11 @@ module.exports = {
                 loader: 'raw'
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch',
+            'es6-promise': 'es6-promise'
+        })
+    ]
 };
